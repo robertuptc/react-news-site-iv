@@ -1,12 +1,22 @@
 import {useParams} from 'react-router-dom'
 import Article from '../components/Article'
+import { fetchArticleByID } from '../api/ArticlesAPI'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
-function ArticlePage ({articles}){
+function ArticlePage (){
+    const [article, setArticle] = useState('')
 
     let {articleID} = useParams()
 
-    const article = articles[articleID-1] // -1 because we added 1 in the url to make it restful
-
+    useEffect(()=>{
+        fetchArticleByID(articleID)
+        .then((response) => {
+            console.log('>>>>>>>',response.data.hits)
+            setArticle(response.data.hits[0])
+        })
+    },[])
+    
     return (
         <div>
             <Article {...article} />

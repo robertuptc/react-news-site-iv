@@ -1,18 +1,18 @@
 [
   {
-    "label": "OPINION",
-    "value": "opinion"
+    "label": "ECONOMY",
+    "value": "economy"
   },
   {
-    "label": "WORLD",
-    "value": "world"
+    "label": "APPLE",
+    "value": "apple"
   },
   {
-    "label": "NATIONAL",
-    "value": "national"
+    "label": "MICROSOFT",
+    "value": "microsoft"
   },
   {
-    "label": "BUSINESS",
-    "value": "business"
+    "label": "SPORTS",
+    "value": "sports"
   }
 ]

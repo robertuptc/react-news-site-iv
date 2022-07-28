@@ -3,11 +3,10 @@ import Search from "../components/Search"
 
 
 function HomePage ({articles}){
-
-
+    
     return (
         <div>
-            <Search articles={articles}/>
+            <Search />
             <hr/>
             <h2>All Articles</h2>
             <ArticleList articles={articles}/>
